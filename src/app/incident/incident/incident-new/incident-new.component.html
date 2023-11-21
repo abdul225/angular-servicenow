@@ -1,3 +1,62 @@
-<p>
-  incident-new works!
-</p>
+<div class="incident-form">
+  <h2>Create a New Incident</h2>
+  <form [formGroup] ="incidentForm" (ngSubmit)="submitIncident()" >
+    <!-- <div class="form-group">
+      <label for="caller_id">Caller:</label>
+      <input type="text" id="caller_id" formControlName="caller_id" required>
+    </div> -->
+    <div class="form-group">
+      <label for="category">Category:</label>
+      <select id="category" formControlName="category" required>
+        <option *ngFor="let item of categories; index as i;" value="{{item.value}}" >{{item.label}}</option>
+        <!-- Add more options as needed -->
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="subcategory">Sub Category:</label>
+      <select id="subcategory" formControlName="subcategory" required>
+       
+ <option *ngFor="let item of subcategories; index as i;" value="{{item.value}}">{{item.label}}</option>
+       -
+        <!-- Add more options as needed -->
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="impact">Impact:</label>
+      <select id="impact" formControlName="impact" required>
+        <option value="1">Low</option>
+        <option value="2">Medium</option>
+        <option value="3">High</option>
+        <!-- Add more options as needed -->
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <textarea id="description" formControlName="description" required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="short_description">Short Description:</label>
+      <textarea id="short_description" formControlName="short_description" required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="urgency">Urgency:</label>
+      <select id="urgency" formControlName="urgency" required>
+        <option value="1">Low</option>
+        <option value="2">Medium</option>
+        <option value="3">High</option>
+        <!-- Add more options as needed -->
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="priority">Priority:</label>
+      <select id="priority" formControlName="priority" required>
+        <option value="1">Critical</option>
+        <option value="2">High</option>
+        <option value="3">Medium</option>
+        <option value="4">Low</option>
+        <!-- Add more options as needed -->
+      </select>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+</div>

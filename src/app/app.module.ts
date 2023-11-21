@@ -13,7 +13,7 @@ import {IndicatorModule} from './indicator/indicator.module';
 import {HomeComponent} from './layouts/home/home.component';
 import {LayoutModule} from './layouts/layout.module';
 import {PageNotFoundComponent} from './layouts/pagenotfound/pagenotfound.component';
-
+import {FormControl,FormGroup } from '@angular/forms';
 
 @NgModule( {
   imports: [

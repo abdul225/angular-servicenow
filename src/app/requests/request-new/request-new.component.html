@@ -1,0 +1,25 @@
+<h1>Create Incident</h1>
+<p>Create an Incident record to report and request assistance with an issue you are having</p>
+
+<p>Request assistance with an issue you are having. An incident record will be created and managed through to successful resolution. You will also be notified of progress.</p>
+
+<p>*Indicates required</p>
+
+<form [formGroup] ="requestForm" (ngSubmit)="submitRequest()" >
+    
+   
+    <div class="form-group">
+      <label for="comments">Description:</label>
+      <textarea id="comments" formControlName="comments" required></textarea>
+    </div>
+   
+    <div class="form-group">
+      <label for="urgency">Urgency:</label>
+      <select id="urgency" formControlName="urgency" required>
+        <option *ngFor="let urgency of urgencyChoices; index as i;" value="{{urgency.value}}" >{{urgency.label}}</option>
+        <!-- Add more options as needed -->
+      </select>
+    </div>
+   
+    <button type="submit">Submit</button> 
+  </form>

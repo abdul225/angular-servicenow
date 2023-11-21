@@ -67,6 +67,7 @@ export class LoginComponent implements OnInit
           //login successful if there's a Spring Session token in the response
           if (response && response['access_token'])
           {
+            console.log("access token ",  response['access_token']);
             //store user details and Spring Session OAuth token refreshes
             localStorage.setItem('access_token', response['access_token']);
             localStorage.setItem('refresh_token', response['access_token']);
@@ -123,7 +124,7 @@ export class LoginComponent implements OnInit
       userObject =>
       {
         this.router.navigate(['/home']);
-        console.log('userObject' + userObject);
+        console.log('userObject' + JSON.stringify(userObject));
       },
       error =>
       {

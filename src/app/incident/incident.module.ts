@@ -12,7 +12,7 @@ import {IncidentListComponent} from './incident/incident-list/incident-list.comp
 import {IncidentNewComponent} from './incident/incident-new/incident-new.component';
 import {IncidentViewComponent} from './incident/incident-view/incident-view.component';
 import {IncidentComponent} from './incident/incident.component';
-
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 @NgModule({
   declarations: [
     IncidentComponent,
@@ -28,7 +28,9 @@ import {IncidentComponent} from './incident/incident.component';
     TableModule,
     DropdownModule,
     InputTextModule,
-    NgxSpinnerModule
+    FormsModule,
+    ReactiveFormsModule,
+    NgxSpinnerModule,
   ]
 })
 export class IncidentModule { }

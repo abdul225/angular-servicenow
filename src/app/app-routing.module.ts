@@ -6,6 +6,7 @@ import {PageNotFoundComponent} from './layouts/pagenotfound/pagenotfound.compone
 const routes: Routes=[
   {path: '', component: HomeComponent},
   {path: 'home', component: HomeComponent},
+  { path: 'requests', loadChildren: () => import('./requests/requests.module').then(m => m.RequestsModule) },
   {path: '**', component: PageNotFoundComponent}
 ];
 

@@ -5,7 +5,16 @@
       <a class="nav-item nav-link" routerLink="/incident">Incidents</a>
     </div>
   </div>
-
+  <div class="navbar-expand mr-auto">
+    <div *ngIf="isLoggedIn()" class="navbar-nav">
+      <a class="nav-item nav-link" routerLink="/incident/list">My Items</a>
+    </div>
+  </div>
+  <div class="navbar-expand mr-auto">
+    <div *ngIf="isLoggedIn()" class="navbar-nav">
+      <a class="nav-item nav-link" routerLink="/requests">Requests</a>
+    </div>
+  </div>
   <div class="navbar-expand ml-auto navbar-nav">
     <div  *ngIf="isLoggedIn()" class="navbar-nav">
       <a class="nav-item nav-link" routerLink="/profile">Profile</a>

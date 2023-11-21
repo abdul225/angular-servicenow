@@ -30,6 +30,10 @@ export class IncidentService
     return this.httpClient.put(url,incident);
   }
 
+  getIncidentChoices(url:string)
+  {
+    return this.httpClient.get(url);
+  }
 
   deleteIncident(url: string)
   {
